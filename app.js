@@ -73,6 +73,46 @@ try {
 
 /////////////////////////////
 
+/////////////////////////////
+
+//QUERYING BY PRICE TO SHOW COURSES GREATER OR EQUAL THAN 28$
+
+// async function getCoursesByComparisionOperators() {
+//   const courses = await Course.find({ price: { $gte: 28 } })
+//     .limit(10)
+//     .sort({ author: 1 })
+//     .select({ name: 1, tags: 1, price: 1 });
+//   console.log(courses);
+// }
+
+// getCoursesByComparisionOperators();
+
+//QUERYING BY PRICE TO SHOW COURSES GREATER THAN 22$
+
+/////////////////////////////
+
+/////////////////////////////
+
+//QUERYING BY PRICE TO SHOW COURSES GREATER THAN 22$ AND LESS THAN 50%
+
+// async function getCoursesByComparisionOperators() {
+//   const courses = await Course.find({ price: { $gt: 22, $lte: 50 } })
+//     .limit(10)
+//     .sort({ author: 1 })
+//     .select({ name: 1, tags: 1, price: 1 });
+//   console.log(courses);
+// }
+
+// getCoursesByComparisionOperators();
+
+//QUERYING BY PRICE TO SHOW COURSES GREATER THAN 22$
+
+/////////////////////////////
+
+
+
+
+
 app.get("/", (req, res) => {
   res.send("Hi");
 });
