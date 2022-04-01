@@ -170,15 +170,39 @@ try {
 
 //----------------------------------------------------------------COUNTING----------------------------------------------------------------
 
-async function countandGetCourses() {
-  const courses = await Course.find().count();
+// async function countandGetCourses() {
+//   const courses = await Course.find().count();
 
-  console.log(`We can count: ${courses} Documents in this collection`);
-}
+//   console.log(`We can count: ${courses} Documents in this collection`);
+// }
 
-countandGetCourses();
+// countandGetCourses();
 
 //----------------------------------------------------------------COUNTING----------------------------------------------------------------
+
+//----------------------------------------------------------------PAGINATION----------------------------------------------------------------
+
+//Hardcoding these variables just for use case only
+
+// const pageNumber = 3;
+// const pageSize = 11;
+
+// async function paginateCourse() {
+//   const courses = await Course.find()
+//     .skip((pageNumber - 1) * pageSize)
+//     .limit(pageSize);
+
+//   console.log(courses);
+// }
+// paginateCourse();
+
+//----------------------------------------------------------------PAGINATION----------------------------------------------------------------
+
+
+
+
+
+
 
 app.get("/", (req, res) => {
   res.send("Hi");
