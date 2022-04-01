@@ -134,12 +134,14 @@ async function getCourse() {
   //and
 
   const courses = await Course.find()
-    .or()
+    .or([{ author: "John Doe" }, { isPublished: false }])
     .sort({ price: 1, name: 1 })
-    .select({ price: 1, name: 1, tags: 1 });
+    .select({ author: 1, name: 1, tags: 1, isPublished: 1 });
 
   console.log(courses);
 }
+
+getCourse();
 
 //----------------------------------------------------------------LOGICAL QUERY OPERATORS----------------------------------------------------------------
 
