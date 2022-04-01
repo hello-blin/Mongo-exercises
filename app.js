@@ -129,21 +129,58 @@ try {
 
 //----------------------------------------------------------------LOGICAL QUERY OPERATORS----------------------------------------------------------------
 
-async function getCourse() {
-  //or
-  //and
+// async function getCourse() {
+//   //or
+//   //and
 
-  const courses = await Course.find()
-    .or([{ author: "John Doe" }, { isPublished: false }])
-    .sort({ price: 1, name: 1 })
-    .select({ author: 1, name: 1, tags: 1, isPublished: 1 });
+//   const courses = await Course.find()
+//     .or([{ author: "John Doe" }, { isPublished: false }])
+//     .sort({ price: 1, name: 1 })
+//     .select({ author: 1, name: 1, tags: 1, isPublished: 1 });
 
-  console.log(courses);
-}
+//   console.log(courses);
+// }
 
-getCourse();
+// getCourse();
 
 //----------------------------------------------------------------LOGICAL QUERY OPERATORS----------------------------------------------------------------
+
+//----------------------------------------------------------------REGULAR EXPRESSIONS----------------------------------------------------------------
+
+// async function getCourses() {
+//   const courses =
+//     //Contains the word 'Lorem'
+//     await Course.find({ author: /.*Lorem*./ })
+//       //Ends with 'oe'
+//       // .find({author: /oe$/})
+//       //Starts with 'Jo'
+//       // .find({ author: /^Jo/ })
+//       .select({
+//         name: 1,
+//         author: 1,
+//         isPublished: 1,
+//       });
+
+//   console.log(courses);
+// }
+
+// getCourses();
+
+//----------------------------------------------------------------REGULAR EXPRESSIONS----------------------------------------------------------------
+
+
+
+//----------------------------------------------------------------COUNTING----------------------------------------------------------------
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------COUNTING----------------------------------------------------------------
+
 
 app.get("/", (req, res) => {
   res.send("Hi");
