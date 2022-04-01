@@ -16,8 +16,13 @@ const Course = new mongoose.model("Course", courseSchema);
 
 //EXERCISE 1 
 
-async function getCourse(){
+// Get all the published Backend Courses,
+// Sort them by their name,
+// Pick only their name and author,
+// Display them on console
 
+async function getCourse(){
+  const course = await Course.find()
 }
 
 app.listen(3000, () => {
