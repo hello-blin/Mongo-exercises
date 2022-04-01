@@ -87,7 +87,7 @@ try {
 
 // getCoursesByComparisionOperators();
 
-//QUERYING BY PRICE TO SHOW COURSES GREATER THAN 22$
+//QUERYING BY PRICE TO SHOW COURSES GREATER OR EQUAL THAN 28$
 
 /////////////////////////////
 
@@ -105,12 +105,28 @@ try {
 
 // getCoursesByComparisionOperators();
 
-//QUERYING BY PRICE TO SHOW COURSES GREATER THAN 22$
+//QUERYING BY PRICE TO SHOW COURSES GREATER THAN 22$ AND LESS THAN 50%
 
 /////////////////////////////
 
 
+/////////////////////////////
 
+//QUERYING BY PRICE TO SHOW COURSES THAT MATCH THE VALUES 28, 55, 65
+
+async function getCoursesByComparisionOperators() {
+  const courses = await Course.find({ price: { $in: [32, 28, 65, 55, 43] } })
+    .limit(10)
+    .sort({ author: 1 })
+    .select({ name: 1, tags: 1, price: 1 });
+  console.log(courses);
+}
+
+getCoursesByComparisionOperators();
+
+//QUERYING BY PRICE TO SHOW COURSES GREATER THAN 22$
+
+/////////////////////////////
 
 
 app.get("/", (req, res) => {
